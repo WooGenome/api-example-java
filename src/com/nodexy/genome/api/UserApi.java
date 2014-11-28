@@ -2,8 +2,6 @@ package com.nodexy.genome.api;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpUtils;
-
 import com.nodexy.genome.ApiConfig;
 import com.nodexy.genome.util.HttpUtil;
 

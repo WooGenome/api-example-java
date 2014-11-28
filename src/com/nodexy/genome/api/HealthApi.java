@@ -1,33 +1,30 @@
 package com.nodexy.genome.api;
 
+import com.nodexy.genome.util.HttpUtil;
+
 public class HealthApi extends BaseApi {
 
     public HealthApi(String accessToken) {
         super(accessToken);
     }
 
-    public String getRisks() {
-
-        return null;// TODO
+    public String getRisks(String profileId) {
+        return HttpUtil.get("/risks/"+profileId,getAccessToken());
     }
 
-    public String getCarriers() {
-
-        return null;// TODO
+    public String getCarriers(String profileId) {
+        return HttpUtil.get("/carriers/"+profileId,getAccessToken());
     }
 
-    public String getDrugResponses() {
-
-        return null;// TODO
+    public String getDrugResponses(String profileId) {
+        return HttpUtil.get("/drug_responses/"+profileId,getAccessToken());
     }
 
-    public String getTraits() {
-
-        return null;// TODO
+    public String getTraits(String profileId) {
+        return HttpUtil.get("/traits/"+profileId,getAccessToken());
     }
 
-    public String getGrfs() {
-
-        return null;// TODO
+    public String getGrfs(String profileId) {
+        return HttpUtil.get("/grfs/"+profileId,getAccessToken());
     }
 }

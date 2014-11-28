@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
 
         String authorizeUrl23andme = String
-                .format("https://api.23andme.com/authorize/?redirect_uri=%s&response_type=code&client_id=%s&scope=basic",
+                .format(ApiConfig.AUTHORIZE_URL +"?redirect_uri=%s&response_type=code&client_id=%s&scope=basic",
                         ApiConfig.REDIRECT_URI, ApiConfig.CLIENT_ID);
         System.out.println("redirect url: " + authorizeUrl23andme);
         response.sendRedirect(authorizeUrl23andme);

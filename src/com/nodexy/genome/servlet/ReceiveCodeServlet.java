@@ -52,7 +52,7 @@ public class ReceiveCodeServlet extends HttpServlet {
             return ;
         }
         
-        HttpsURLConnection conn = (HttpsURLConnection)new URL("https://api.23andme.com/token/").openConnection();
+        HttpsURLConnection conn = (HttpsURLConnection)new URL(ApiConfig.ACCESS_TOKEN_URL).openConnection();
         conn.setUseCaches(false); 
         conn.setDoOutput(true);
         conn.setDoInput(true);

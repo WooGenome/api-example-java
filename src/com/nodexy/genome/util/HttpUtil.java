@@ -14,6 +14,14 @@ public class HttpUtil {
     public static String get(String url, String accessToken) {
         return post(url, accessToken, null);
     }
+    
+    public static String put(String url, String accessToken,String params) {
+        return post(url, accessToken, params); // TODO
+    }
+    
+    public static String patch(String url, String accessToken,String params) {
+        return post(url, accessToken, params); // TODO
+    }
 
     public static String post(String url, String accessToken, String params) {
         PrintWriter out = null;
